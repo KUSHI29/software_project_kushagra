@@ -1,0 +1,1 @@
+In this project, we designed a cloud system using AWS architecture. The agentic workflow coordinates tasks efficiently. AWS Lambda handles backend requests while cloud monitoring tracks metrics.
