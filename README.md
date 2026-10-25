@@ -1,85 +1,72 @@
-# Software Project
+# Overview of the Basic Bot template
 
-## 📌 About the Project
+Examples of Microsoft Teams bots in everyday use include:
 
-This repository contains the source code and related files for my software development project. The project is developed as part of my learning and practical implementation of software engineering concepts.
+- Bots that notify about build failures.
+- Bots that provide information about the weather or bus schedules.
+- Bots that provide travel information.
 
-## 🎯 Objectives
+A bot interaction can be a quick question and answer, or it can be a complex conversation. Being a cloud application, a bot can provide valuable and secure access to cloud services and corporate resources.
+This app template is built on top of [Microsoft Teams SDK](https://aka.ms/teams-ai-library-v2).
+## Get started with the Basic Bot template
 
-- Build a functional software application.
-- Apply software engineering principles in a practical project.
-- Develop problem-solving and programming skills.
-- Maintain organized, readable, and reusable code.
+> **Prerequisites**
+>
+> To run the Basic Bot template in your local dev machine, you will need:
+>
+> - [Node.js](https://nodejs.org/), supported versions: 20, 22
+> - [Microsoft 365 Agents Toolkit Visual Studio Code Extension](https://aka.ms/teams-toolkit) version 5.0.0 and higher or [Microsoft 365 Agents Toolkit CLI](https://aka.ms/teamsfx-toolkit-cli)
 
-## 🛠️ Technologies Used
+> For local debugging using Microsoft 365 Agents Toolkit CLI, you need to do some extra steps described in [Set up your Microsoft 365 Agents Toolkit CLI for local debugging](https://aka.ms/teamsfx-cli-debugging).
 
-_Add the technologies used in your project._
+1. First, select the Microsoft 365 Agents Toolkit icon on the left in the VS Code toolbar.
+2. Press F5 to start debugging which launches your app in Microsoft 365 Agents Playground using a web browser. Select `Debug in Microsoft 365 Agents Playground`.
+3. The browser will pop up to open Microsoft 365 Agents Playground.
+4. You will receive a welcome message from the bot, and you can send anything to the bot to get an echoed response.
 
-- Programming Language: `Add language`
-- Frontend: `Add frontend technology, if applicable`
-- Backend: `Add backend technology, if applicable`
-- Database: `Add database, if applicable`
-- Tools: Git and GitHub
+**Congratulations**! You are running an application that can now interact with users in Microsoft 365 Agents Playground:
 
-## 📂 Project Structure
+![basic bot](./img/echo-bot.png)
 
-```text
-software_project_kushagra/
-├── src/                 # Source code
-├── assets/              # Images and other resources (if applicable)
-├── tests/               # Test files (if applicable)
-└── README.md            # Project documentation
-```
 
-*Update this structure to match the actual files and folders in your repository.*
+## What's included in the template
 
-## ⚙️ Installation and Setup
+| Folder       | Contents                                            |
+| - | - |
+| `.vscode`    | VSCode files for debugging                          |
+| `appPackage` | Templates for the application manifest        |
+| `env`        | Environment files                                   |
+| `infra`      | Templates for provisioning Azure resources          |
 
-1. Clone the repository:
+The following files can be customized and demonstrate an example implementation to get you started.
 
-   ```bash
-   git clone https://github.com/KUSHI29/software_project_kushagra.git
-   ```
+| File                                 | Contents                                           |
+| - | - |
+|`app.js`| Handles business logics for the echo bot.|
+|`index.js`|`index.js` is used to setup and configure the echo bot.|
 
-2. Navigate to the project directory:
+The following are Microsoft 365 Agents Toolkit specific project files. You can [visit a complete guide on Github](https://github.com/OfficeDev/TeamsFx/wiki/Teams-Toolkit-Visual-Studio-Code-v5-Guide#overview) to understand how Microsoft 365 Agents Toolkit works.
 
-   ```bash
-   cd software_project_kushagra
-   ```
+| File                                 | Contents                                           |
+| - | - |
+|`m365agents.yml`|This is the main Microsoft 365 Agents Toolkit project file. The project file defines two primary things:  Properties and configuration Stage definitions. |
+|`m365agents.local.yml`|This overrides `m365agents.yml` with actions that enable local execution and debugging.|
+|`m365agents.playground.yml`| This overrides `m365agents.yml` with actions that enable local execution and debugging in Microsoft 365 Agents Playground.|
 
-3. Install the required dependencies according to the technology used.
+## Extend the Basic Bot template
 
-4. Configure any required environment variables or settings.
+Following documentation will help you to extend the Basic Bot template.
 
-## ▶️ How to Run
-
-Follow the instructions relevant to the programming language and framework used in this project.
-
-For example, if the project uses Node.js:
-
-```bash
-npm install
-npm run dev
-```
-
-*These commands are examples only. Replace them with the actual commands required by your project.*
-
-## ✨ Features
-
-- Add the main feature of your project.
-- Describe the key functionality.
-- Mention any important tools or technologies implemented.
-
-## 🧪 Testing
-
-Add details about the tests performed, testing tools used, and how to run the tests.
-
-## 👨‍💻 Author
-
-**Kushagra Gautam**
-
-GitHub: [@KUSHI29](https://github.com/KUSHI29)
-
-## 📄 License
-
-This project is intended for educational and learning purposes. Add a suitable license if required.
+- [Add or manage the environment](https://learn.microsoft.com/microsoftteams/platform/toolkit/teamsfx-multi-env)
+- [Create multi-capability app](https://learn.microsoft.com/microsoftteams/platform/toolkit/add-capability)
+- [Add single sign on to your app](https://learn.microsoft.com/microsoftteams/platform/toolkit/add-single-sign-on)
+- [Access data in Microsoft Graph](https://learn.microsoft.com/microsoftteams/platform/toolkit/teamsfx-sdk#microsoft-graph-scenarios)
+- [Use an existing Microsoft Entra application](https://learn.microsoft.com/microsoftteams/platform/toolkit/use-existing-aad-app)
+- [Customize the app manifest](https://learn.microsoft.com/microsoftteams/platform/toolkit/teamsfx-preview-and-customize-app-manifest)
+- Host your app in Azure by [provision cloud resources](https://learn.microsoft.com/microsoftteams/platform/toolkit/provision) and [deploy the code to cloud](https://learn.microsoft.com/microsoftteams/platform/toolkit/deploy)
+- [Collaborate on app development](https://learn.microsoft.com/microsoftteams/platform/toolkit/teamsfx-collaboration)
+- [Set up the CI/CD pipeline](https://learn.microsoft.com/microsoftteams/platform/toolkit/use-cicd-template)
+- [Publish the app to your organization or the Microsoft app store](https://learn.microsoft.com/microsoftteams/platform/toolkit/publish)
+- [Develop with Microsoft 365 Agents Toolkit CLI](https://aka.ms/teams-toolkit-cli/debug)
+- [Preview the app on mobile clients](https://aka.ms/teamsfx-mobile)
+#
